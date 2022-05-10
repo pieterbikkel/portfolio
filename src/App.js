@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect } from 'react';
+import './App.scss';
+import Me from "./assets/ik.png"
 
 function App() {
+
+  useEffect(() => {
+
+  }, [])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="home">
+      <div className="home__container home__container--pastel">
+        <img className="home__container__image" src={Me} alt="Pieter Bikkel"/>
+      </div>
+      <div className="home__container home__container--colourful">
+        <h1>Pieter Bikkel</h1>
+        <code>// About me</code>
+        <h4>Fullstack software developer</h4>
+        <p>I'm a passionate developer who loves tinkering with new technologies. I have experience with iOS and Web Development.</p>
+      </div>
     </div>
   );
 }
