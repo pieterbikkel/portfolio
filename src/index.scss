@@ -1,67 +1,47 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat:500");
+// Fonts
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+@font-face {
+  font-family: 'Sanshiro';
+  src: url("./assets/Sanshiro-Black.ttf") format("truetype");
+}
+
+// Colors
+
+$purple: #4B30E8;
+$yellow: #F0B35B;
+
+// Typography
+
+h1 {
+  margin: 0;
+  font-family: 'Sanshiro', sans-serif;
+  color: $purple;
+  font-size: 3.1rem;
+}
+
+h4 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-family: 'Sanshiro', sans-serif; 
+}
+
+p {
+  font-size: 1rem;
+}
+
+// Other styling
+
+.page-margin {
+  margin: 0 2.5rem;
+}
 
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   padding-bottom: unquote('env(safe-area-inset-bottom)');
 }
 
-
-h1 {
-  font-family: sans-serif;
-  font-size: 2.5rem;
-  letter-spacing: 2px;
-  color: #f35626;
-  background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -webkit-animation: hue 10s infinite linear;
-
-  @media only screen and (min-width: 800px) {
-    font-size: 5rem;
-  }
-}
-
-@keyframes hue {
-  from {
-    -webkit-filter: hue-rotate(0deg);
-  }
-  to {
-    -webkit-filter: hue-rotate(-360deg);
-  }
-}
-
-code {
-  font-size: 1rem;
-  color: #699754;
-  font-weight: 300;
-
-  @media only screen and (min-width: 800px) {
-    font-size: 2rem;
-  }
-}
-
-h4 {
-  font-size: 1.3rem;
-  color: white;
-  font-weight: 600;
-  margin-bottom: 0.1rem;
-  margin-top: 1rem;
-
-  @media only screen and (min-width: 800px) {
-    font-size: 2.5rem;
-  }
-}
-
-p {
-  font-size: 1rem;
-  color: rgb(229, 229, 229);
-  line-height: 1.5rem;
-
-  @media only screen and (min-width: 800px) {
-    font-size: 1.8rem;
-    line-height: 2.3rem;
-  }
-}

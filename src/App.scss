@@ -1,60 +1,75 @@
 .home  {
-  display: flex;
-  flex-direction: column;
+    padding-top: 5rem;
+    display: flex;
+    flex-direction: column;
 
-  @media only screen and (min-width: 800px) {
-    flex-direction: row-reverse;   
-  }
+    @media only screen and(min-width: 600px) {
+        flex-direction: row-reverse;
+        column-gap: 2rem;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    &__me {
+        margin-top: 2.5rem;
+        margin-bottom: 2.5rem;
+        width: calc(100% - 5rem);
+        max-width: 28rem;
+        height: 25rem;
+        border-radius: 0 0 0 3.8rem;
+        position: relative;
+        background-image: url(./assets/pieter.webp);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        
 
-  &__container {
-    width: calc(100% - 2rem);
-    min-height: 50vh;
-    padding: 0 1rem;
+        @media only screen and (min-width: 600px) and (max-width: 800px) {
+            min-width: 40%;
+        }
 
-    @media only screen and (min-width: 800px) {
-      min-height: 100vh;
-      padding: 0 3rem;
+        @media only screen and (min-width: 1000px) {
+            height: 100%;
+            min-height: 25rem;
+            
+        }
+
+        &__background {
+            background-color: #4B30E8;
+            border-radius: 0 0 0 3.8rem;
+            opacity: 0.4;
+            position: absolute;
+            height: 25rem;
+            width: 100%;
+            top: -1rem;
+            right: -1rem;
+            z-index: -1;
+        }
     }
 
-    &--pastel {
-      position: relative;
-      background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-      background-size: 400% 400%;
-      animation: gradient 15s ease infinite;
+    &__text-section {
+
+        @media only screen and(min-width: 600px) {
+            position: relative;
+            left: 3rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            max-width: 28rem;
+            row-gap: 1rem;
+            
+            h1, p {
+                margin: 0;
+            }
+        }
     }
 
-    &--colourful {
-      background-color: #1E1E1E;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+    &__title {
+
+        &--yellow {
+            color: #F0B35B;
+        }
     }
-
-    &__image {
-      position: absolute;
-      bottom: 0;
-      max-height: 50vh;
-      object-fit: contain;
-      width: calc(80% - 2rem);
-      padding: 0 10%;
-
-      @media only screen and (min-width: 800px) {
-        width: calc(80% - 6rem);
-        max-height: 100vh;
-      }
-    }
-
-  }
-}
-
-@keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
 }

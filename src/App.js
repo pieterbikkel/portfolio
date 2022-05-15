@@ -1,23 +1,24 @@
-import { useEffect } from 'react';
 import './App.scss';
-import Me from "./assets/ik.png"
+import Button from './components/button/Button';
 
 function App() {
 
-  useEffect(() => {
-
-  }, [])
+  const openResume = () => {
+    console.log("Click");
+  }
 
   return (
     <div className="home">
-      <div className="home__container home__container--pastel">
-        <img className="home__container__image" src={Me} alt="Pieter Bikkel"/>
+      <div className='home__me page-margin'>
+        <div className="home__me__background"></div>
       </div>
-      <div className="home__container home__container--colourful">
-        <h1>Pieter Bikkel</h1>
-        <code>// About me</code>
-        <h4>Fullstack software developer</h4>
-        <p>I'm a passionate developer who loves tinkering with new technologies. I have experience with iOS and Web Development.</p>
+      <div className='home__text-section'>
+        <div>
+          <h1 className='home__title page-margin'>Welcome</h1>
+          <h1 className='home__title page-margin'>I am <span className='home__title--yellow'>Pieter</span></h1>
+        </div>
+        <p className='page-margin'>I am a full stack developer located in the Netherlands. My passion lies in making iOS and React apps. Currently I am studying Computer Science at the HAN, University of applied sciences.</p>
+        <Button text="Check out my resume!" buttonFunc={openResume}/>
       </div>
     </div>
   );
