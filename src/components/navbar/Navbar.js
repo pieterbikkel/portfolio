@@ -4,33 +4,18 @@ import {ReactComponent as Linkedin} from '../../assets/linkedin.svg';
 import {ReactComponent as Mail} from "../../assets/mail.svg";
 import {ReactComponent as Github} from "../../assets/github.svg";  
 import { useEffect, useState } from 'react';
-import { debounce, throttle } from "../../utils/Limitors";
 
 function Navbar() {
 
-    const [scrollAmount, setScrollAmount] = useState(0);
     const [hoverLinkedin, setHoverLinkedin] = useState(false)
     const [hoverMail, setHoverMail] = useState(false)
     const [hoverGithub, setHoverGithub] = useState(false)
 
-    const rangeMap = (number, inMin, inMax, outMin, outMax) => {
-        return (number - inMin) * (outMax - outMin) / (inMax - inMin) + outMin;
-    }
-
     const navStyle = {
-        backdropFilter: `blur(${scrollAmount}px)`,
-        webkitBackdropFilter: `blur(${scrollAmount}px)`
+        backgroundColor: 'rgba(255, 255, 255, .9)',
+        backdropFilter: `blur(5px)`,
+        webkitBackdropFilter: `blur(5px)`
     }
-
-    const handleScroll = () => {
-        let amountOfBlur = rangeMap(window.pageYOffset, 0, 50, 0, 5);
-        setScrollAmount(amountOfBlur);
-    }
-
-    useEffect(() => {
-        window.addEventListener("scroll", throttle(debounce(handleScroll)));
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [])
 
     useEffect(() => {
         if (hoverLinkedin) {

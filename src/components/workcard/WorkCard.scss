@@ -1,0 +1,36 @@
+.work-card {
+    margin: 2rem 0;
+
+    h3 {
+        margin-left: 2.5rem;
+
+        @media only screen and (min-width: 600px) {
+            margin-left: 0;
+        }
+    }
+
+    &__container {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 0.5rem;
+
+        img {
+            width: calc(100% - 5rem);
+            border-radius: 0.7rem;
+            height: 12rem;
+            object-fit: cover;
+
+            @media only screen and (min-width: 600px) {
+                width: 100%;
+                max-width: max(80vw / 2);
+                height: 100%;
+                max-height: (80vw / 3);;
+            }
+
+            @media only screen and (min-width: 1000px) {
+                max-width: 27rem;
+                max-height: 17rem;
+            }
+        }
+    }
+}
