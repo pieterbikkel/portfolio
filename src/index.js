@@ -11,9 +11,8 @@ root.render(
     <BrowserRouter>
       <Navbar/>
       <Routes>
-        <Route path='/' element={<App />}/>
+        <Route path='/portfolio' element={<App />}/>
         <Route
-        //todo 404
           path="*"
           element={
             <main style={{ padding: "5rem 1.5rem" }}>

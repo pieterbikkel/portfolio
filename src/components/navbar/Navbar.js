@@ -4,6 +4,7 @@ import {ReactComponent as Linkedin} from '../../assets/linkedin.svg';
 import {ReactComponent as Mail} from "../../assets/mail.svg";
 import {ReactComponent as Github} from "../../assets/github.svg";  
 import { useEffect, useState } from 'react';
+import { Link } from "react-router-dom";
 
 function Navbar() {
 
@@ -43,7 +44,7 @@ function Navbar() {
 
     return (
         <nav className="navbar" style={navStyle}>
-            <h4>Pieter Bikkel</h4>
+            <Link to="/portfolio"><h4>Pieter Bikkel</h4></Link>
             <div className='navbar__socials'>
                 <a href="https://www.linkedin.com/in/pieterbikkel/" target="_blank" rel="noopener noreferrer">
                     <Linkedin onMouseEnter={() => setHoverLinkedin(true)} onMouseLeave={() => setHoverLinkedin(false)}/>

@@ -2,12 +2,35 @@ import './App.scss';
 import Button from './components/button/Button';
 import WorkCard from './components/workcard/WorkCard';
 import Formdesk from './assets/work/formdesk.png';
+import './Contact.scss'
+import { useEffect } from 'react';
 
 function App() {
 
   const openResume = () => {
     console.log("Click");
   }
+
+  const animateButton = function (e) {
+    e.preventDefault();
+    //reset animation
+    e.target.classList.remove("animate");
+    
+    e.target.classList.add("animate");
+    setTimeout(function () {
+        e.target.classList.remove("animate");
+    }, 700);
+  };
+
+  useEffect(() => {
+
+    const bubblyButtons = document.getElementsByClassName("bubbly-button");
+
+    for (let i = 0; i < bubblyButtons.length; i++) {
+        bubblyButtons[i].addEventListener("click", animateButton, false);
+    }
+
+}, [])
 
   const work = [
     {
@@ -52,12 +75,31 @@ function App() {
         <h1 className='landing__title--yellow page-margin'>Projects</h1>
         <div className='projects__container'>
           {work.map((workItem) => (
-              <WorkCard link={workItem.link} img={workItem.img} title={workItem.title}/>
+              <WorkCard key={workItem.title} link={workItem.link} img={workItem.img} title={workItem.title}/>
           ))}
         </div>
       </section>
+
+      <section className='contact'>
+        <h1 className='landing__title--yellow page-margin'>Contact</h1>
+        <form className='page-margin'>
+          <div className="input-container">
+            <input type="text" id="name" className="text-input" autoComplete="off" placeholder="Enter your name" required name="name"/>
+            <label className="label" htmlFor="date">Name</label>
+          </div>
+          <div className="input-container">
+            <input type="text" id="email" className="text-input" autoComplete="off" placeholder="Email" required name="email"/>
+            <label className="label" htmlFor="homeTeam">Email</label>
+          </div>
+          <div className="input-container">
+            <textarea rows="6" type="text" id="message" className="text-input" autoComplete="off" placeholder="Message" required name="message"/>
+            <label className="label" htmlFor="otherTeam">Message</label>
+          </div>
+          <button className="bubbly-button">Send</button>
+        </form>
+      </section>
     </>
   );
-}
+} 
 
 export default App;
