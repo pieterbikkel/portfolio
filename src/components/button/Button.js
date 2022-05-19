@@ -1,10 +1,11 @@
 import "./Button.scss"
+import CV from "../../assets/curriculum-vitae.pdf"
 
-function Button({text, buttonFunc}) {
+function Button({text}) {
     return (
-        <div className="button page-margin" onClick={buttonFunc}>
+        <a className="button page-margin" target="_blank" href={CV} rel="noreferrer">
             {text}
-        </div>
+        </a>
     )
 }
 

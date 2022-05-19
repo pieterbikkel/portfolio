@@ -88,3 +88,27 @@
         }
     }
 }
+
+.contact {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+
+    &__container {
+
+        @media only screen and (min-width: 1000px) {
+            display: flex;
+            column-gap: 3rem;
+        }
+        
+        img {
+            display: none;
+
+            @media only screen and (min-width: 1000px) {
+                display: block;
+                width: 100%;
+                max-width: 30rem;
+            }
+        }
+    }    
+}

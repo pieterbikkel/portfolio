@@ -4,16 +4,20 @@ import './index.scss';
 import App from './App';
 import Navbar from './components/navbar/Navbar';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import ComingSoon from './pages/comingsoon/ComingSoon';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Navbar/>
+      <ToastContainer/>
       <Routes>
-        <Route path='/' element={<App />}/>
+        <Route path='/' element={<App/>}/>
+        <Route path='/coming-soon' element={<ComingSoon/>}/>
         <Route
-        //todo 404
           path="*"
           element={
             <main style={{ padding: "5rem 1.5rem" }}>
