@@ -1,15 +1,65 @@
+// Styling
 import './App.scss';
+import './Contact.scss'
+
+// Components
 import Button from './components/button/Button';
 import WorkCard from './components/workcard/WorkCard';
+
+// Assets
 import Formdesk from './assets/work/formdesk.png';
-import './Contact.scss'
-import { useEffect, useState } from 'react';
 import Work from './assets/contact.svg';
+
+// Other
+import { useEffect, useState } from 'react';
 import { toast } from 'react-toastify';
+import { motion } from "framer-motion"; //AnimateSharedLayout, AnimatePresence
 
 function App() {
 
   const [formInfo, setFormInfo] = useState();
+
+  // Animations
+  const letterVariant = {
+    start : {
+      opacity: 0,
+      y: 60
+    },
+    end: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.7,
+        ease: "easeOut",
+      }
+    }
+  }
+
+  const titleVariant = {
+    end: {
+      transition: {
+        staggerChildren: 0.1
+      }
+    }
+  }
+
+  const imageBGVariant = {
+    start: {
+      opacity: 0,
+      x: "-1rem",
+      y: "1rem"
+    },
+    end: {
+      opacity: 0.4,
+      x: 0,
+      y: 0,
+      transition: {
+        duration: 0.4,
+        ease: "easeInOut",
+        delay: 0.4
+      }
+    }
+  }
 
   const animateButton = function (e) {
     e.preventDefault();
@@ -74,11 +124,24 @@ function App() {
     <>
       <section className="landing">
         <div className='landing__me page-margin'>
-          <div className="landing__me__background"></div>
+          <motion.div 
+            variants={imageBGVariant}
+            initial="start"
+            animate="end"
+            className="landing__me__background"
+          ></motion.div>
         </div>
         <div className='landing__text-section'>
           <div>
-            <h1 className='landing__title page-margin'>Welcome</h1>
+            <motion.h1 initial="start" animate="end" variants={titleVariant} className='landing__title page-margin'>
+              <motion.span variants={letterVariant}>W</motion.span>
+              <motion.span variants={letterVariant}>e</motion.span>
+              <motion.span variants={letterVariant}>l</motion.span>
+              <motion.span variants={letterVariant}>c</motion.span>
+              <motion.span variants={letterVariant}>o</motion.span>
+              <motion.span variants={letterVariant}>m</motion.span>
+              <motion.span variants={letterVariant}>e</motion.span>
+            </motion.h1>
             <h1 className='landing__title page-margin'>I am <span className='landing__title--yellow'>Pieter</span></h1>
           </div>
           <p className='page-margin'>I am a full stack developer located in the Netherlands. My passion lies in making iOS and React apps. Currently I am studying Computer Science at the HAN, University of applied sciences.</p>

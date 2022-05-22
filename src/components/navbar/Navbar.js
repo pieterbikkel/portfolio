@@ -5,6 +5,7 @@ import {ReactComponent as Github} from "../../assets/github.svg";
 import { useEffect, useState } from 'react';
 import { Link } from "react-router-dom";
 import { Link as SmoothLink } from "react-scroll";
+import { motion } from "framer-motion";
 
 function Navbar() {
 
@@ -43,7 +44,16 @@ function Navbar() {
     }, [hoverGithub])
 
     return (
-        <nav className="navbar" style={navStyle}>
+        <motion.nav 
+            initial={{ opacity: 0, y: -77 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+            ease: "easeOut",
+            duration: 0.7,
+            delay: 0,
+            }}
+            className="navbar" style={navStyle}
+        >
             <Link to="/"><h4>Pieter Bikkel</h4></Link>
             <div className='navbar__socials'>
                 <a href="https://www.linkedin.com/in/pieterbikkel/" target="_blank" rel="noopener noreferrer">
@@ -56,7 +66,7 @@ function Navbar() {
                     <Github onMouseEnter={() => setHoverGithub(true)} onMouseLeave={() => setHoverGithub(false)}/>
                 </a>
             </div>
-        </nav>
+        </motion.nav>
     );
 }
 
