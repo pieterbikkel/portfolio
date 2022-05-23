@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.b98adb07.css",
-    "main.js": "/static/js/main.c22ee13d.js",
+    "main.css": "/static/css/main.1a650b6d.css",
+    "main.js": "/static/js/main.b06a2266.js",
     "static/media/curriculum-vitae.pdf": "/static/media/curriculum-vitae.2d56acbdbeb27e054b5f.pdf",
     "static/media/formdesk.png": "/static/media/formdesk.d69d9bfe53181fcf111f.png",
     "static/media/pieter.webp": "/static/media/pieter.f66967641a05d92a60d9.webp",
@@ -11,11 +11,11 @@
     "index.html": "/index.html",
     "static/media/mail.svg": "/static/media/mail.5ce1827c4ae8d63e009c8f6be74c25b2.svg",
     "static/media/linkedin.svg": "/static/media/linkedin.84d21a2af0e267131cfb69031a428f46.svg",
-    "main.b98adb07.css.map": "/static/css/main.b98adb07.css.map",
-    "main.c22ee13d.js.map": "/static/js/main.c22ee13d.js.map"
+    "main.1a650b6d.css.map": "/static/css/main.1a650b6d.css.map",
+    "main.b06a2266.js.map": "/static/js/main.b06a2266.js.map"
   },
   "entrypoints": [
-    "static/css/main.b98adb07.css",
-    "static/js/main.c22ee13d.js"
+    "static/css/main.1a650b6d.css",
+    "static/js/main.b06a2266.js"
   ]
 }
