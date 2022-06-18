@@ -12,6 +12,11 @@
 $purple: #4B30E8;
 $yellow: #F0B35B;
 
+:root {
+  --purple: #{$purple};
+  --yellow: #{$yellow};
+}
+
 // Typography
 
 h1 {
@@ -19,6 +24,13 @@ h1 {
   font-family: 'Sanshiro', sans-serif;
   color: $purple;
   font-size: 3.1rem;
+}
+
+h2 {
+  margin: 0;
+  font-family: 'Sanshiro', sans-serif;
+  color: $yellow;
+  font-size: 2.2rem;
 }
 
 h3 {
@@ -40,7 +52,7 @@ p {
 // Other styling
 
 .page-margin {
-  margin: 0 2.5rem;
+  margin: 0 1.5rem;
 }
 
 body {
@@ -66,4 +78,12 @@ input:-webkit-autofill:hover,
 input:-webkit-autofill:focus, 
 input:-webkit-autofill:active{
     -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+
+textarea {
+  font-family: inherit;
+}
+
+a[class^="project-"]:hover {
+  background-color: #2306c7;
 }

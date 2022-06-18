@@ -1,13 +1,14 @@
  import "./WorkCard.scss"
  import { Link } from "react-router-dom";
  
- function WorkCard ({link, img, title}) {
+ function WorkCard ({work}) {
+
      return (
          <div className="work-card">
-            <Link className="work-card__container" to={link}>
-                <img src={img} alt={title}/>
+            <Link className="work-card__container" to={work.link}>
+                <img src={work.img} alt={work.title}/>
             </Link>
-            <h3>{title}</h3>
+            <h3>{work.title}</h3>
          </div>
      )
  }
