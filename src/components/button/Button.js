@@ -5,7 +5,7 @@ function Button({text}) {
 
     return (
         <a 
-            className="button page-margin" 
+            className="btn page-margin" 
             target="_blank" 
             href={CV} 
             rel="noreferrer"

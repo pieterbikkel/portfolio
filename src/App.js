@@ -76,6 +76,21 @@ function App({work}) {
     }
   }
 
+  const handleClick = (e) => {
+    switch (e.detail) {
+      case 1:
+        break;
+      case 2:
+        console.log("double click");
+        
+        break;
+      case 3:
+        break;
+      default:
+        return;
+    }
+  };
+
   const encode = (data) => {
     return Object.keys(data)
         .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
@@ -148,7 +163,7 @@ function App({work}) {
             </motion.h1>
             <h1 className='landing__title page-margin'>I am <span className='landing__title--yellow'>Pieter</span></h1>
           </div>
-          <p className='page-margin'>I am a full stack developer located in the Netherlands. My passion lies in making iOS and React apps. Currently I am studying Computer Science at the HAN, University of applied sciences.</p>
+          <p onClick={handleClick} className='page-margin'>I am a full stack developer located in the Netherlands. My passion lies in making iOS and React apps. Currently I am studying Computer Science at the HAN, University of applied sciences.</p>
           <Button text="Check out my resume!"/>
         </div>
       </section>
