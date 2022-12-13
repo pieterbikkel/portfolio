@@ -13,6 +13,7 @@ import Work from './assets/contact.svg';
 import { useEffect, useState } from 'react';
 import { toast } from 'react-toastify';
 import { motion } from "framer-motion";
+import Spline from '@splinetool/react-spline';
 
 function App({work}) {
 
@@ -163,7 +164,7 @@ function App({work}) {
             </motion.h1>
             <h1 className='landing__title page-margin'>I am <span className='landing__title--yellow'>Pieter</span></h1>
           </div>
-          <p onClick={handleClick} className='page-margin'>I am a full stack developer located in the Netherlands. My passion lies in making iOS and React apps. Currently I am studying Computer Science at the HAN, University of applied sciences.</p>
+          <p onClick={handleClick} className='page-margin'>I am a full stack developer located in the Netherlands. My passion lies in making iOS and React apps. Currently I am studying Software engineering at the HAN, University of applied sciences.</p>
           <Button text="Check out my resume!"/>
         </div>
       </section>
@@ -196,7 +197,7 @@ function App({work}) {
             </div>
             <button type="submit" className="bubbly-button">Send</button>
           </form>
-          <img src={Work} alt="contact envelope"/>
+          <Spline scene="https://prod.spline.design/eLafu3qrHzmgWY9v/scene.splinecode" />
         </div>
       </section>
     </motion.div>

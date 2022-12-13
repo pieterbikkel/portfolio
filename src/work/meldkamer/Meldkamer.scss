@@ -1,0 +1,121 @@
+.project-meldkamer {
+
+    section {
+        margin-bottom: 2rem;
+    }
+
+    margin-top: 5rem;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+
+    &__about {
+        display: flex;
+        flex-direction: column;
+
+        @media only screen and (min-width: 1000px) {
+            display: block;
+        }
+
+        img {
+            width: calc(100% - 3rem);
+            align-self: center;
+            border-radius: 0.7rem;
+            max-height: 30rem;
+            object-fit: cover;
+
+            @media only screen and (min-width: 1000px) {
+                width: calc(50% - 1.5rem);
+                margin-right: 1.5rem;
+            }
+        }
+
+        &__wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            @media only screen and (min-width: 1000px) {
+                flex-direction: row-reverse;
+                justify-content: start;
+            }
+        }
+
+        &__container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 1.3rem;
+
+            @media only screen and (min-width: 1000px) {
+                width: calc(50% - 1.5rem);
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: normal;
+            }
+
+            h1 {
+                color: #F0B35B;
+            }
+
+            &--small {
+                background-color: #4B30E8;
+                width: 2.2rem;
+                height: 2.2rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 10px;
+
+                @media only screen and (min-width: 1000px) {
+                    display: none;
+                }
+
+                img {
+                    width: 1.4rem;
+                    height: 1.4rem;
+                }
+            }
+
+            p {
+                display: none;
+
+                @media only screen and (min-width: 1000px) {
+                    display: block;
+                }
+            }
+
+            &__button {
+                display: none;
+
+                @media only screen and (min-width: 1000px) {
+
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-top: 1.5rem;
+                    background-color: #4B30E8;
+                    color: white;
+                    width: 10rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 10px;
+                    padding: 0.8rem 1.6rem;
+        
+                    img {
+                        width: 1.4rem;
+                        height: 1.4rem;
+                    }
+                }
+            }
+        }
+
+        &--base {
+            @media only screen and (min-width: 1000px) {
+                display: none;
+            }   
+        }
+
+    }
+}
